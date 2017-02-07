@@ -1,0 +1,61 @@
+.container-fluid {
+  &.border {
+    border-bottom: 1px solid #999;
+  }
+}
+.input-container {
+  margin-bottom: 20px;
+}
+input {
+  background-repeat: no-repeat;
+  background-position: 98.5%;
+  outline: none;
+  text-align: center;
+  margin: 0;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 0;
+  border-radius: 5px;
+  background-color: rgba(231, 227, 229, 0.3);
+  &:hover,
+  &:visited,
+  &:not(:active) {
+    background-color: rgba(231, 227, 229, 0.3);
+  }
+  &#inputLocation {
+    background-image: url("../img/location-icon.png");
+    color: #ed491c !important;
+    height: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.30);
+    background-size: 20px;
+  }
+  &#inputDesiredDish {
+    background-image: url("../img/search-icon.png");
+    margin: 3% 0%;
+    height: 3.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #555 !important;
+    margin-bottom: 7.5px;
+    background-size: 30px;
+  }
+}
+
+a,
+a:hover,
+a:visited {
+  color: #555;
+  background-color: rgba(231, 227, 229, 0.3);
+}
+
+.dropdown-divider, .dropdown-menu{
+  margin: 0;
+  padding: 0;
+}
+
+fieldset {
+  margin: 0;
+}
+
+.form-group {
+  margin-bottom: 10%;
+}

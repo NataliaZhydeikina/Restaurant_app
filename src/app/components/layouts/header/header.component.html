@@ -1,0 +1,25 @@
+<header class="row">
+	<button (click)="routToPrev()" type="button" class="button-prev"></button>
+	<div *ngIf="display" [ngClass]="{'with-buttons': withButtons }" class="user">
+		<h3 class="hidden-xs-down">{{name}}</h3>
+		<div class="photo-wrap">
+			<img [src]="photo" alt="">
+		</div>
+	</div>
+	<div *ngIf="!withButtons" class="title-wrap">
+		<h1>{{title}}</h1>
+		<ul class="burger-menu col-xs-12" [ngClass]="{'menu-open': isClassVisible }">
+			<li><p class="fake-link" (click)="routTo('/')">Home</p></li>
+			<li><p class="fake-link" (click)="routTo('/list')">Find some food</p></li>
+			<li><p class="fake-link" (click)="routTo('/login')">Login</p></li>
+			<li><p class="fake-link" (click)="routTo('/register')">Register</p></li>
+			<li><p class="fake-link" (click)="routTo('/chenge-pass')">Forgot Password?</p></li>
+		</ul>
+		<button class="burg-menu-btn" type="button" [ngClass]="{'active': isClassVisible }" (click)="isClassVisible = !isClassVisible;"></button>
+	</div>
+	<div *ngIf="withButtons" class="buttons-wrap">
+		<button (click)="routTo('/list')" [ngClass]="{'active': active }" class="navigate-btns" type="button">List</button>
+		<button (click)="routTo('/map')" [ngClass]="{'active': !active }" class="navigate-btns" type="button">Map</button>
+	</div>
+	
+</header>

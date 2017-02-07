@@ -1,0 +1,25 @@
+.reg-log-btns {
+  height: auto;
+  left: 0;
+  right: 0;
+  display: block;
+  button {
+    height: 50px;
+    width: 29%;
+        margin: 3vh 10% 0;
+    background-color: #fff;
+    color: #ed5d33;
+    border: none;
+    border-radius: 30px;
+    min-width: 100px;
+    font-size: 1.6em;
+    &:hover {
+      color: #fff;
+      background-color: #ED4233;
+    }
+    &.active {
+      background-color: #ed5d33;
+      color: #fff;
+    }
+  }
+}

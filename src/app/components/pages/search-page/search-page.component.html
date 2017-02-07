@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <div class="row">
+    <a class="banner-link col-xs-12" routerLink="/login"></a>
+  </div>
+  <div class="row center-text">
+    <p class="offset-xs-2 col-xs-8">
+      What are you in the mood for?</p>
+  </div>
+  <app-search-form #dish></app-search-form>
+  <div class="row">
+    <form class="offset-xs-0 col-xs-12 offset-md-2 col-md-8">
+      <div class="form-group">
+        <button [disabled]="!dish.inputText" (click)="routToList(dish.inputText, dish.indexes)" type="button" class="btn btn-primary form-control input-container search-button">LET`S FIND IT!</button>
+      </div>
+    </form>
+  </div>
+  <div class="row down-text">
+    <p class="offset-xs-2 col-xs-8">
+      We will find what you crave, by searching restaurants around you</p>
+  </div>
+</div>

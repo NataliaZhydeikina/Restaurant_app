@@ -1,0 +1,108 @@
+.write-review-wrap {
+    width: 100%;
+    padding: 20px 50px;
+    h3 {
+        line-height: 65px;
+    }
+    h5 {
+        font-size: 20px;
+        font-weight: bold;
+        color: #555;
+    }
+    a {
+        display: inline-block;
+        border-radius: 50%;
+    }
+    textarea {
+        width: 100%;
+        min-height: 300px;
+    }
+    .user-photo {
+        padding: 0;
+        overflow: hidden;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .add-photo {
+        border-top: 1px solid #b3b3b3;
+        border-bottom: 1px solid #b3b3b3;
+        text-align: center;
+        padding: 15px;
+        margin-bottom: 20px;
+        a {
+            height: 200px;
+            width: 200px;
+            background: url(../../../img/add-photo.png) no-repeat center center;
+            background-size: 70% auto;
+            &:hover {
+                background-color: #eaeaea;
+            }
+        }
+        .inputPhoto {
+            margin: 2% auto;
+            position: relative;
+            border-bottom: 0;
+            background-color: #fff;
+            border-radius: 50%;
+            padding: 0;
+            height: 15vh;
+            width: 15vh;
+            height: 200px;
+            width: 200px;
+            margin: 2% auto;
+            overflow: hidden;
+
+            &:hover {
+                background-color: #dcdbdb;
+            }
+
+            input[type="file"] {
+                cursor: pointer;
+                display: block;
+                position: absolute;
+                border-radius: 50%;
+                height: 15vh;
+                width: 15vh;
+                height: 200px;
+                width: 200px;
+                padding: 0;
+                opacity: 0;
+                z-index: 2;
+            }
+            .photoholder {
+                padding-top: 35px;
+                height: 200px;
+                width: 200px;   
+                img {
+                    width: 80%;
+                    height: auto;
+                }
+            }
+            .photo-wrap {
+                width: 200x;
+                height: 200px;
+                img {
+                    width: auto;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .stars {
+        margin: 30px 0;
+        text-align: center;
+    }
+    button {
+        height: 50px;
+        background-color: #ed5d33;
+        color: #fff;
+        border-radius: 15px;
+        min-width: 100px;
+        font-size: 1.6rem;
+    }
+}

@@ -1,0 +1,245 @@
+/* You can add global styles to this file, and also import other style files */
+$main-color: #e8532a;
+$restaurant-marker-color: #ed5d33;
+$me-marker-color: #c00000;
+$pirce-color: #4d6c74;
+
+* {
+  outline: none !important;
+  color: #55595c;
+}
+
+a,
+a:hover,
+a:visited {
+  color: #fff;
+}
+
+h3 {
+  color: #444;
+  font-size: 24px;
+}
+
+h4 {
+  color: #333;
+  font-size: 22px;
+}
+
+button {
+  border: none;
+  background-color: inherit;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.text-transform {
+  text-transform: uppercase;
+}
+
+.pac-logo:after {
+  display: none !important;
+  background-image: none !important;
+}
+
+.fake-link {
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+i.star-icon:before {
+  color: $main-color !important;
+}
+
+
+.my-marker-circle,
+.restourant-marker-circle {
+  width: 60px;
+  text-align: center;
+  height: 60px;
+  padding-top: 30%;
+  background-color: $me-marker-color;
+  border-radius: 50%;
+}
+
+.restourant-marker-circle {
+  background-color: $restaurant-marker-color;
+  padding-top: 0;
+  margin: 0 auto;
+}
+
+.restourant-marker-icon {
+  width: 40px;
+  height: 30px;
+  margin: 12px auto;
+}
+
+.my-marker-wrapper {
+  //background: url('https://firebasestorage.googleapis.com/v0/b/sep-angular2.appspot.com/o/images%2Fmarkers%2Fmarker-types%2Fmy-icon.png?alt=media&token=a100d664-bc05-4c8e-8cad-557536bc2251');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  min-width: 60px;
+  text-align: center;
+  min-height: 70px;
+  padding-top: 22.5%;
+}
+
+.my-marker-text {
+  color: #fff;
+  font-family: "Myriad Set Pro", sans-serif;
+  font-size: 4vh;
+  font-weight: 600;
+  line-height: 4vh;
+  margin-top: 20%;
+}
+
+.my-marker-triangle,
+.restourant-marker-triangle {
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 20px solid $me-marker-color;
+  margin: -2px auto 0;
+}
+
+.restourant-marker-triangle {
+  border-top: 20px solid $restaurant-marker-color;
+}
+
+.price-container {
+  background-color: $pirce-color;
+  margin: -27.5px 4px 0;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.price-container span {
+  color: #fff;
+}
+
+#map div > a > div > img {
+  //delete  Googl label at map
+  display: none;
+}
+@media (max-width: 576px) {
+  body {
+    font-size: 14px;
+  }
+}
+//
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
+
+.bubble-star-rating {
+  height: 20px;
+  position: relative;
+  width: 100px;
+  float: left;
+  left: 30px;
+}
+
+.bubble-star-rating:before {
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/sep-angular2.appspot.com/o/images%2Fstars%2Fstar_gray.png?alt=media&token=ff911eef-8c1b-4ec8-b327-b31eab837930') !important;
+  background-repeat: repeat-x;
+  background-size: 20px;
+  bottom: 0;
+  content: "";
+  float: left;
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+}
+
+.bubble-star-rating > span {
+  display: block;
+  text-indent: -10000px;
+  width: 100px;
+  height: 20px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.bubble-star-rating > span:before {
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/sep-angular2.appspot.com/o/images%2Fstars%2Forange_star.png?alt=media&token=e9ce530d-97bb-4381-b7a1-b5e03b00576c') !important;
+  background-repeat: repeat-x;
+  background-size: 20px;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-indent: 10000px;
+  top: 0;
+}
+
+body #wrapper {
+  text-align: center;
+  margin: 5px auto;
+  width: 250px;
+  padding: 0;
+}
+
+#wrapper div {
+  font-family: "Myriad Set Pro", sans-serif;
+}
+
+.dish-name {
+  width: 100%;
+  color: $restaurant-marker-color;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 10px;
+}
+
+.review {
+  float: left;
+  width: 60px;
+  margin: 2px 40px;
+}
+
+.raiting-reviews-wrapper {
+  width: 100%;
+}
+
+.js-info-bubble-close {
+  margin-right: 10px;
+  margin-top: 10px;
+  width:10px;
+}
+
+#wrapper .price {
+  background-color: $pirce-color;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px auto;
+  width: 50px;
+  color: #fff;
+}
+
+#wrapper .distance {
+  color: $restaurant-marker-color;
+  font-size: 16px;
+}
+
+.plase-adress {
+  color: $pirce-color;
+  font-size: 24px;
+}
+
+.raiting-reviews-wrapper {
+  content: "";
+  display: table;
+  clear: both;
+}

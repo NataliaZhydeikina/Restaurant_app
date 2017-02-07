@@ -1,0 +1,123 @@
+header {
+	position: relative;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	height: 75px;
+	color: #fff;
+	background-color: #ed5d33;
+	h1 {
+		font-size: 2rem;
+		padding: 20px 0;
+		color: #fff;
+	}
+	button {
+		position: absolute;
+		width: 75px;
+		height: 75px;
+		border: none;
+		outline: none;
+		background-color: inherit;
+		z-index: 1;
+		&:hover {
+			background-color: #ED4233;
+		}
+	}
+	.button-prev {
+		left: 0;
+		top: 0;
+		background: url(../../../img/button-left.png) no-repeat 55% center;
+		background-size: 15%;
+	}
+	.title-wrap {
+		.burg-menu-btn {
+			right: 0;
+			top: 0;
+			background: url(../../../img/drop-down-arrow-white.png) no-repeat 55% center;
+			background-size: 30%;
+			&:before {
+				content: '';
+				height: 2px;
+			}
+			&.active {
+				background: url(../../../img/drop-up-arrow-white.png) no-repeat 55% center;
+				background-size: 30%;
+			}
+		}
+		.burger-menu {
+			max-height: 0;
+			margin-top: -8px;
+			border-top: 3px solid #de5730;
+			font-size: 20px;
+			background-color: #ed5d33;
+			-webkit-transition: max-height 1s;
+			-moz-transition: max-height 1s;
+			-o-transition: max-height 1s;
+			transition: max-height 1s;
+			li {
+				display: none;
+				margin-bottom: 5px;
+				list-style: none;
+			}
+			&.menu-open {
+				max-height: 500px;
+				li {
+					display: list-item;
+				}
+			}
+		}
+	}
+	.user {
+		position: absolute;
+		top: 0;
+		padding: 12px;
+		right: 75px;
+		width: auto;
+		height: 75px;
+		h3 {
+			float: left;
+			line-height: 50px;
+			margin: 0 10px;
+			color: #fff;
+		}
+		.photo-wrap {
+			overflow: hidden;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		&.with-buttons {
+			right: 0;
+		}
+	}
+	.buttons-wrap {
+		width: 100%;
+		height: 75px;
+		.navigate-btns {
+			position: static;
+			height: 50px;
+			width: 12%;
+			margin: 13px 10%;
+			background-color: #fff;
+			color: #ed5d33;
+			border: none;
+			border-radius: 15px;
+			min-width: 100px;
+			font-size: 1.6rem;
+			&:hover {
+				background-color: #ed5d33;
+				color: #fff;
+				border: 1px solid #fff;
+			}
+			&.active {
+				background-color: #ed5d33;
+				color: #fff;
+				border: 1px solid #fff;
+			}
+		}
+	}
+}

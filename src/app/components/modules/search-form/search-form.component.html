@@ -1,0 +1,26 @@
+<div [ngClass]="{'border': this.router.url == '/list'}" class="container-fluid">
+  <div class="row">
+    <form class="offset-xs-0 col-xs-12 offset-md-2 col-md-8 clearfix" #f="ngForm" [formGroup]="form" (ngSubmit)="search(f)">
+      <div class="input-container">
+        <div class="thumbnail clearfix">
+          <div class="dropdown open clearfix">
+            <input autocomplete="off" (keyup.enter)="routTo()" type="search" [(ngModel)]="inputText" formControlName="desiredDish"
+            class="form-control dropdown-toggle" id="inputDesiredDish"
+            placeholder="Blood Mary" data-toggle="dropdown" aria-haspopup="true"
+             aria-expanded="false">
+            <div class="dropdown-menu form-control" *ngIf="dishesNames && inputText.length != 0"
+             aria-labelledby="inputDesiredDish">
+             <div *ngFor="let name of dishesNames | filterArrayOfDishs :  inputText">
+              <a class="dropdown-item" href="#" (click)="getDish(name)">
+                {{name}}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <input type="search" (keyup.enter)="routTo()" class="form-control" placeholder="Current Location" id="inputLocation" formControlName="location" [(ngModel)]="address" (setAddress)="getAddress($event)" googleplace/>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
