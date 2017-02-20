@@ -8,6 +8,7 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
 import { RatingModule } from 'ng2-rating';
 // Directives
 //import {GoogleplaceDirective} from 'angular2-google-map-autocomplete/directives/googleplace.directive';
+
 // Main component
 import { AppComponent } from './app.component';
 // Auth components
@@ -58,7 +59,11 @@ var routes = configRoutes();
     SearchFormComponent,
     ListViewComponent,
     ListItemComponent,
+<<<<<<< HEAD
     //GoogleplaceDirective,
+=======
+    GoogleplaceDirective,
+>>>>>>> 76ce4054335a5e4195286978db132581ba56e810
     SearchPageComponent,
     MapComponent,
     ListReviewsComponent,

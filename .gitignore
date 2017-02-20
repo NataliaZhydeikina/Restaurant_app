@@ -1,6 +1,6 @@
 # Ignore Node & Bower
 ###################
-dist
+dists
 .vscode
 bower_components
 .tmp
