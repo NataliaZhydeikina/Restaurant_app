@@ -1,0 +1,57 @@
+{
+  "data": [
+    {
+    "name" : "Joes Sports Bar",
+    "adress" : "54 Nassau Street, Princeton NJ",
+    "phone" : "(243) 879 2136",
+    "time" : "0.2 mi",
+    "status" : "Open till 5 pm",
+    "dishes" : [
+      {
+        "name": "Spisy Bloody Mary",
+        "rating" : "3.5",
+        "price" : "$6.99",
+        "img" : "../../../img/item-img.png",
+        "description" : "Extra spicy bloodu mary after joes original bar recipe. Mixed by the original recipe of the great grandfather Paul Paulson who started this sportsbar in 1887 in the back of his house. selling Bloody Meries to frends and family. Loves by millions, this drinc is worls famos. If this description is too long for the space, then the text should be able to de displayed more...",
+        "reviews" : [
+          {
+            "reviewer" : "Peter Johnson",
+            "reviewerPhoto" : "../img/person-icon.png",
+            "rating" : "3.5",
+            "date" : "1 Month Ago",
+            "review" : "The 30min of search have paid off. This was the best Bloody Mary we had in a long time. Spicy but not too crazy. Nice garnish, and served in a big glass. Woth the money for sure."
+          }
+        ]
+      }
+    ],
+    "open" : false
+    },
+    {
+    "name" : "Joes Sports Bar",
+    "adress" : "54 Nassau Street, Princeton NJ",
+    "phone" : "(243) 879 2136",
+    "time" : "0.2 mi",
+    "status" : "Open till 5 pm",
+    "dishes" : [
+      {
+        "name": "Spisy Bloody Mary",
+        "rating" : "3.5",
+        "price" : "$6.99",
+        "img" : "../../../img/item-img.png",
+        "description" : "Extra spicy bloodu mary after joes original bar recipe. Mixed by the original recipe of the great grandfather Paul Paulson who started this sportsbar in 1887 in the back of his house. selling Bloody Meries to frends and family. Loves by millions, this drinc is worls famos. If this description is too long for the space, then the text should be able to de displayed more...",
+        "reviews" : [
+          {
+            "reviewer" : "Peter Johnson",
+            "reviewerPhoto" : "../img/person-icon.png",
+            "rating" : "3.5",
+            "date" : "1 Month Ago",
+            "review" : "The 30min of search have paid off. This was the best Bloody Mary we had in a long time. Spicy but not too crazy. Nice garnish, and served in a big glass. Woth the money for sure."
+          }
+        ]
+      }
+    ],
+    "open" : false
+    }
+
+  ]
+}

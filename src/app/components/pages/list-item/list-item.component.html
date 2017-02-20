@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="row list-item" *ngFor="let item of items">
+    <div class="item-photo col-xs-4">
+      <a href='#'>
+        <img *ngIf="item.photo" class="with-photo" src="{{item.photo[0]}}" alt="">
+        <img *ngIf="!item.photo" src="../../../img/item-img.png" alt="">
+      </a>
+    </div>
+    <div class="col-xs-8">
+      <h3 class="link" (click)="routToItemPage(item)">{{item.name}}</h3>
+      <rating [(ngModel)]="item.rating" class="stars" [max]="5" iconClass="star-icon" fullIcon="★" emptyIcon="☆" [readonly]="true" [disabled]="false" [required]="false" [float]="true" [titles]="['one', 'two', 'three', 'four', 'five']"></rating>
+      <p class="all-reviews"><span *ngIf="item.reviews">{{item.reviews.length}}</span><span *ngIf="!item.reviews">0</span> reviews</p>
+      <h4>{{item.place}}</h4>
+      <p>{{item.adress}}</p>
+      <p>{{item.phone}}</p>
+      <!--<p *ngIf="item.workSchedule.opening.indexOf('am') != -1 && compareHours.indexOf('am') && func(item.workSchedule.opening) > func('9 am')" class="status">Open till </p>-->
+      <p class="status">{{item.status}}</p>
+    </div>
+    <div class="price-time">
+      <p class="price">{{item.price}}</p>
+      <p>{{item.distance}} km</p>
+    </div>
+    <a class="map-elem" [ngClass]="{'map-view': item.open }" (click)="mapNavigation(item)"><img src="../../../img/map-view.png" alt=""></a>
+    <div class="item-content col-xs-12" [ngClass]="{'item-content-open': item.open }">
+      <div class="row">
+        <div class="add-review col-xs-12">
+          <p>Recent Reviews</p>
+          <button (click)='redirectTo(item)' type="button">Add review</button>
+        </div>
+        <div class="item-review col-xs-12">
+          <!-- reviews component -->
+          <app-list-reviews [reviews]="item.reviews"></app-list-reviews>
+        </div>
+        <div class="item-description col-xs-12">
+          <div class="text-wrapper">
+            <h5>Item Description</h5>
+            <p>{{item.description}}</p>
+          </div>
+          <div class="img-wrapper">
+            <img *ngIf="item.photo && item.photo.length <= 1" src="{{item.photo[0]}}" alt="">
+            <div *ngIf="item.photo && item.photo.length > 1" id="slider{{item.uid}}{{item.index}}" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li *ngFor="let link of item.photo"  data-slide-to="#item.photo.indexOf(link)" [ngClass]="{'active': item.photo.indexOf(link) == 0 }"></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item" [ngClass]="{'active': item.photo.indexOf(photo) == 0 }" *ngFor="let photo of item.photo">
+                  <img src="{{photo}}" alt="">
+                </div>
+              </div>
+              <a class="left carousel-control" href="#slider{{item.uid}}{{item.index}}" role="button" data-slide="prev">
+                <span class="icon-prev" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#slider{{item.uid}}{{item.index}}" role="button" data-slide="next">
+                <span class="icon-next" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="drop-toggle-item col-xs-12" type="button" [ngClass]="{'drop-item-open': item.open }" (click)="addClass(item, items)"></button>
+  </div>
+</div>
+<p class="error" *ngIf="errorMessage">{{errorMessage}}</p>

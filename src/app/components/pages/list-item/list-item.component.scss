@@ -1,0 +1,188 @@
+.container {
+    width: 100%;
+}
+
+.list-item {
+    height: auto;
+    position: relative;
+    padding-top: 10px;
+    border-bottom: 1px solid #666;
+    p {
+        font-size: 16px;
+        margin: 0;
+        &.status {
+            color: #ed5d33;
+            font-weight: bold;
+            font-size: 17px;
+        }
+    }
+    .link {
+        cursor: pointer;
+    }
+    .item-photo {
+        text-align: center;
+        a {
+            display: block;
+            margin: 0 auto;
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        img {
+            width: auto;
+            height: 100%;
+            &.with-photo {
+                margin-left: -35%;
+            }
+        }
+    }
+    .price-time {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        p {
+            color: #ed5d33;
+            &.price {
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+    }
+    .drop-toggle-item {
+        height: 30px;
+        background: url(../../../img/drop-down-arrow.png) no-repeat center center;
+        background-size: auto 50%;
+        &.drop-item-open {
+            background: url(../../../img/drop-up-arrow.png) no-repeat center center;
+            background-size: auto 50%;
+        }
+        &:hover {
+            background-color: #eaeaea;
+        }
+    }
+    .map-elem {
+        position: absolute;
+        right: 20px;
+        top: 75px;
+        width: 100px;
+        height: 100px;
+        display: none;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        &.map-view {
+            display: block;
+        }
+    }
+    .stars {
+        margin-right: 10px;
+        float: left;
+    }
+    .all-reviews {
+        line-height: 50px;
+    }
+    .item-content {
+        opacity: 0;
+        margin-top: 10px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 1s, opacity 0.5s;
+        &.item-content-open {
+            opacity: 1;
+            max-height: 3000px;
+        }
+        button {
+            height: 30px;
+            background-color: #fff;
+            color: #ed5d33;
+            border: 1px solid #ed5d33;
+            border-radius: 5px;
+            min-width: 100px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            &:hover {
+                background-color: #ed5d33;
+                color: #fff;
+                border: none;
+            }
+            &.active {
+                background-color: #ed5d33;
+                color: #fff;
+                border: none;
+            }
+        }
+        .add-review {
+            border-top: 1px solid #b3b3b3;
+            border-bottom: 1px solid #b3b3b3;
+            padding: 10px 25px;
+            p {
+                font-size: 20px;
+                line-height: 30px;
+                float: left;
+            }
+            button {
+                float: right;
+            }
+        }
+        .item-description {
+            padding: 10px 25px;
+            .text-wrapper {
+                width: 100%;
+                padding: 0 10px;
+                margin-bottom: 20px;
+            }
+            .img-wrapper {
+                width: 80%;
+                margin: 0 10%;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                }
+                .carousel-control {
+                    opacity: 0.7;
+                }
+                .carousel-control.right {
+                    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%);
+                }
+                .carousel-control.left {
+                    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%);
+                }
+                .carousel-control.icon-prev,
+                .carousel-control.icon-next {
+                    margin-top: -15px;
+                }
+                .carousel-control .icon-next::before {
+                    content: "\203A";
+                    zoom: 2;
+                    color: #fff;
+                }
+                .carousel-control .icon-prev::before {
+                    content: "\2039";
+                    zoom: 2;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .carousel-control.icon-prev,
+    .carousel-control.icon-next {
+        margin-top: -30px;
+    }
+}
+@media (max-width: 576px) {
+    .list-item {
+        .item-content {
+            .item-description {
+                .img-wrapper {
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

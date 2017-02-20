@@ -1,0 +1,18 @@
+<div class="item-review row" *ngFor="let review of reviews">
+  <div class="user-photo col-xs-4">
+    <img src="{{review.reviewerPhoto}}" alt="">
+  </div>
+  <div class="name-date-wrap col-xs-5">
+    <h3>{{review.reviewer}}</h3>
+    <p>{{review.date}} </p>
+  </div>
+  <div class="col-md-5">
+    <rating [(ngModel)]="review.rating" [max]="5" iconClass="star-icon" fullIcon="★" emptyIcon="☆" [readonly]="true" [disabled]="false" [required]="false" [float]="true" [titles]="['one', 'two', 'three', 'four', 'five']"></rating>
+  </div>
+  <div class="review-text col-xs-12">
+    <p>{{review.review}}</p>
+  </div>
+</div>
+<div *ngIf="noReviews" class="show-more-reviews col-xs-12">
+  <button class="" type="button"  (click)="addClass(reviews)">Show More {{moreReviews}} Reviews</button>
+</div>

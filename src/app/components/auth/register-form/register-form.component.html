@@ -1,0 +1,40 @@
+<app-header [sendedTitle]="titlName" [sendButtons] = false></app-header>
+<app-log-reg-btns></app-log-reg-btns>
+<div class="container-fluid">
+  <div class="row">
+    <form class="offset-xs-0 col-xs-12 offset-md-2 col-md-8" #f="ngForm" [formGroup]="form" (ngSubmit)="register(f)">
+      <div class="form-group input-container with-error" [class.with-error]="!f.valid" [class.with-success]="f.valid" [class.with-pristine]="f.pristine">
+        <div class="thumbnail">
+          <fieldset class="form-group">
+            <input type="text" formControlName="name" class="form-control" id="inputName" placeholder="Name">
+          </fieldset>
+          <fieldset class="form-group">
+            <input type="email" formControlName="email" class="form-control" id="inputEmail" placeholder="Email">
+          </fieldset>
+          <fieldset class="form-group">
+            <input type="password" formControlName="password" class="form-control" id="inputPassword" placeholder="Password">
+          </fieldset>
+          <fieldset class="form-group">
+            <div class="form-control inputPhoto" name="inputPhoto">
+              <input type="file" id="photo" class="" (change)="setFile($event.target.files[0])" placeholder="">
+              <div *ngIf="!viewPhoto" class="photoholder">
+                <img src="{{downloadURL}}" alt="person icon" />
+                <p>Add your photo</p>
+              </div>
+              <div *ngIf="viewPhoto" class="photo-wrap">
+                <img class="photo" src="{{downloadURL}}" alt="person icon" />
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <div class="alert alert-danger" *ngIf="f.form.controls.email.invalid && f.form.controls.email.dirty && f.form.controls.email.value.length != 0">{{ f.form.controls.email.errors.message }}</div>
+      <div class="alert alert-danger" *ngIf="f.form.controls.password.invalid && f.form.controls.password.dirty && f.form.controls.password.value.length != 0">{{ f.form.controls.password.errors.message }}</div>
+      <div class="alert alert-danger" *ngIf="f.form.controls.name.invalid && f.form.controls.name.dirty && f.form.controls.name.value.length != 0">{{ f.form.controls.name.errors.message }}</div>
+      <div class="form-group">
+        <button [disabled]="!f.valid" type="submit" class="btn btn-primary form-control register-button">REGISTER</button>
+      </div>
+    </form>
+  </div>
+</div>
+<app-privacy-policy></app-privacy-policy>

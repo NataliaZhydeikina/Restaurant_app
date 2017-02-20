@@ -1,0 +1,13 @@
+<footer class="container">
+	<div class="row">
+		<div *ngIf="!this.as.isLoggedIn" [class.hidden-lg-down]="this.as.isLoggedIn" class="footer-el col-xs-6">
+			<p class="fake-link" (click)="routToChangePass()">Forgot your password?</p>
+		</div>
+		<div *ngIf="this.as.isLoggedIn" [class.col-xs-12]="this.as.isLoggedIn" class="footer-el">
+			<p class="fake-link" (click)="logOut()">Log out</p>
+		</div>
+		<div *ngIf="!this.as.isLoggedIn" [class.hidden-lg-down]="this.as.isLoggedIn" class="footer-el col-xs-6">
+			<p class="fake-link" routerLink="/login">Log in</p>
+		</div>
+	</div>
+</footer>

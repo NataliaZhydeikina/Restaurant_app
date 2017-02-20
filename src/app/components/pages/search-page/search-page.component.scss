@@ -1,0 +1,53 @@
+.container-fluid {
+  height: 92.6vh;
+  background-image: url("../img/search-screen-background.png");
+  background-repeat: no-repeat;
+  background-position: 0%;
+  background-size: 100% auto;
+  overflow: hidden;
+  .banner-link {
+    display: inline-block;
+    height: 200px;
+    background: url(../../img/logo2.png) no-repeat center center;
+    background-size: auto;
+    margin-bottom: 30px;
+  }
+  .center-text {
+    text-align: center;
+    p {
+      color: white;
+      font-size: 1.5em;
+      text-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
+    }
+  }
+  .search-button {
+    margin-top: 30px;
+    background-color: #e8532a;
+    color: #fff;
+    &:hover {
+      color: #ed491c;
+      background-color: #fff;
+      border: 1px solid #e8532a;
+    }
+  }
+  .down-text {
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    p {
+      color: white;
+      font-size: 1.25em;
+      text-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .container-fluid {
+    background-position: 50%;
+    background-size: 150% auto;
+    .banner-link {
+      background-size: 70%;
+    }
+  }
+}

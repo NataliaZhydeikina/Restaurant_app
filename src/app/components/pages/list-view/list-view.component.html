@@ -1,0 +1,3 @@
+<app-header [sendButtons] = true></app-header>
+<app-search-form (keyup.enter)="items.some()" (reload)="items.some()" #dish></app-search-form>
+<app-list-item #items></app-list-item>
